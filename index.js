@@ -82,7 +82,7 @@ const saveEdits = (e) => {
 	const targetID = e.getAttribute("name");
 	const updatedTaskData = {
 		id: targetID,
-		url: document.getElementsByTagName("img")[0].getAttribute("src"),
+		url: e.parentNode.parentNode.childNodes[3].getAttribute("src"),
 		title: e.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML,
 		type: e.parentNode.parentNode.childNodes[5].childNodes[5].innerHTML,
 		deadline: e.parentNode.parentNode.childNodes[5].childNodes[7].innerHTML,
